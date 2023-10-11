@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+.review {
+    background-color: #0d5825;
+    width: 650px;
+    height: 500px;
+}
+
+.quote {
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.quote p {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.cards {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    width: 150px;
+    position: relative;
+    transform: translate(60px, -22px) rotate(-20deg);
+    transition: 0.1s linear;
+}
+
+.card1:hover {
+    transform: translate(60px, -42px) rotate(-20deg);
+}
+
+.card2 {
+    width: 150px;
+    position: relative;
+    transform: translate(-40px, -15px) rotate(-7deg);
+    transition: 0.1s linear;
+}
+
+.card2:hover {
+    transform: translate(-40px, -45px) rotate(-7deg);
+}
+
+
+.card3 {
+    width: 150px;
+    position: relative;
+    transform: translate(-133px, 0px) rotate(8deg);
+    transition: 0.1s linear;
+}
+
+.card3:hover {
+    transform: translate(-133px, -35px) rotate(8deg);
+}
+
+.boxes {
+    position: relative;
+    width: 220px;
+    height: 220px;    
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.greenbox {
+    width: 100px;
+    height: 100px;
+    background-color: #4DEF99;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.redbox {
+    width: 100px;
+    height: 100px;
+    background-color: #FF8888;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bluebox {
+    width: 100px;
+    height: 100px;
+    background-color: #7E8AEB;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+.navigation{
+    position: relative;
+    background-color: #7E7E7E;
+    width: 250px;
+    height: 450px;
+    padding: 30px 15px;
+    padding-right: 0;
+    transform: translateX(-90%);
+    transition: all .3s ease 0s;
+    margin-top: 50px;
+}
+
+.navigation:hover {
+    transform: translateX(0%);
+}
+
+.menu__list {
+    text-transform: uppercase;
+}
+
+.menu__item {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.menu__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    transform: rotate(45deg);
+    background-color: #D99104;
+    width: 10px;
+    height: 10px;
+    border-radius: 10%;
+    border: 2px solid #111;
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease 0s;
+}
+
+.menu__link:hover {
+    color: #D99104;
+}
+
+.menu__text {
+    position: absolute;
+    right: 2%;
+    top: 40%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    writing-mode: vertical-lr;
+    transition: opacity .3s ease 0s;
+    opacity: 1;
+}
+
+.navigation:hover .menu__text {
+    opacity: 0;
+}
+
+.box {   
+    width: 500px;
+    height: 500px;    
+    position: relative;
+}  
+
+.square {   
+    position: absolute;
+    background-color: rgb(255, 238, 0);    
+    width: 100px;
+    height: 100px;    
+    animation: moveSquare 5s ease-in 0s infinite normal backwards;
+}  
+
+@keyframes moveSquare {    
+    0%{background-color: rgb(255, 238, 0); top: 0;}
+    25%{background-color: rgb(0, 255, 42); top: 400px; left: 0px;}    
+    50%{background-color: rgb(255, 0, 0); top: 400px; left: 400px;}
+    75%{background-color: rgb(0, 81, 255); top: 0px; left: 400px; bottom: 400px;}    
+    100%{background-color: rgb(255, 238, 0); top: 0px; left: 0px; bottom: 400px; right: 400px;}
+}
